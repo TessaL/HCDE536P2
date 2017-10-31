@@ -30,59 +30,60 @@
 		<script src="framer/coffee-script.js"></script>
 		<script src="framer/framer.js?nocache=83b93a18bdbd3fbeddb94979879b63f0"></script>
 		<script src="framer/framer.generated.js?nocache=543051dad6f878d355d9a2c7f661a73b"></script>
-		<script src="framer/framer.modules.js?nocache=b3d3a7a84aed399060dba25ff42c353f"></script>
+		<script src="framer/framer.modules.js?nocache=928dcce24c9c5c1ca9308e718d8b850f"></script>
 		<script src="framer/framer.vekter.js"></script>
-		<script>Framer.Device.hideBezel = false</script><script>document.addEventListener("DOMContentLoaded", function() {window.__framerClientCodeId = 275;window.__framerNew = function (n,loc,th,i){if (i == null) { return i };i.__framerInstanceInfo = _.defaults({name:n,location:loc,hash:th},i.__framerInstanceInfo);_.defaults(i.__framerInstanceInfo,{name:"Untitled"});return i;};window.__framerAnimation = function (th,a){if (a.isNoop === true) {return a;};var l = a.layer;if (l == null) { return a; };if (l.__framerAnimationInfo == null) {l.__framerAnimationInfo = {};};l.__framerAnimationInfo[th] = {originalState:a._originalState, destinationProperties: a.properties, destinationOptions: a.options};return a;};(function() {
+		<script>Framer.Device.hideBezel = false</script><script>document.addEventListener("DOMContentLoaded", function() {window.__framerClientCodeId = 65;window.__framerNew = function (n,loc,th,i){if (i == null) { return i };i.__framerInstanceInfo = _.defaults({name:n,location:loc,hash:th},i.__framerInstanceInfo);_.defaults(i.__framerInstanceInfo,{name:"Untitled"});return i;};window.__framerAnimation = function (th,a){if (a.isNoop === true) {return a;};var l = a.layer;if (l == null) { return a; };if (l.__framerAnimationInfo == null) {l.__framerAnimationInfo = {};};l.__framerAnimationInfo[th] = {originalState:a._originalState, destinationProperties: a.properties, destinationOptions: a.options};return a;};(function() {
   var ViewController, Views;
 
   ViewController = require('ViewController');
 
-  Views = window.__framerNew("Views", "2:12-8:0", "?",new ViewController({
+  Views = window.__framerNew("Views", "2:12-4:0", "?",new ViewController({
     initialView: home
   }));
 
   Signup_Button.onTap(function(event, layer) {
-    window.__framerAnimation("#171fae01b",haven_logo.animate("a", {
+    window.__framerAnimation("#15688cd5a",haven_logo.animate("a", {
       time: 0.40,
       curve: Spring({
         damping: 1
       })
     }));
-    window.__framerAnimation("#110ad91de",haven_title.animate({
+    window.__framerAnimation("#f53b7f1d",haven_title.animate({
       opacity: 0,
       options: {
         time: 0.01,
         curve: Bezier.ease
       }
     }));
-    window.__framerAnimation("#1192cba23",LogIn_Button.animate({
+    window.__framerAnimation("#14593cd1f",LogIn_Button.animate({
       opacity: 0,
       options: {
         time: 0.01,
         curve: Bezier.ease
       }
     }));
-    window.__framerAnimation("#1788ebebd",or_1.animate({
+    window.__framerAnimation("#14e12f564",or_1.animate({
       opacity: 0,
       options: {
         time: 0.01,
         curve: Bezier.ease
       }
     }));
-    window.__framerAnimation("#b5f42243",Signup_Button.animate({
-      opacity: 1,
+    window.__framerAnimation("#e25b353f",Signup_Button.animate({
+      opacity: 0,
       backgroundColor: "#ffffff",
       y: 194,
       x: 31,
       options: {
         time: 0.5
       }
-    }, window.__framerAnimation("#17f30b4e0",signup_text.animate({
+    }, window.__framerAnimation("#ab97c7dc",signup_text.animate({
       color: "#000000",
-      y: 29,
-      x: 123
-    }, signup_text.text = "Sign up", {
-      opacity: 1
+      y: 213,
+      x: 145,
+      options: {
+        time: 0.5
+      }
     }))));
     return Signup_Button.onAnimationEnd(function() {
       return Views.fadeIn(screen2);
@@ -95,14 +96,18 @@
 
   greenPass.visible = false;
 
+  weak.visible = false;
+
+  haven_logo_1.clip = true;
+
   haven_logo.states.a = {
-    width: 100,
-    height: 100,
     y: 92,
-    x: 138
+    x: 138,
+    width: 100,
+    height: 100
   };
 
-  window.__framerAnimation("#83bd1add",blinker.animate({
+  window.__framerAnimation("#14ed6df9c",blinker.animate({
     properties: {
       opacity: 0
     },
@@ -112,14 +117,14 @@
   }));
 
   keyboard.onTap(function() {
-    window.__framerAnimation("#b6c623fc",name_placeholder.animate({
+    window.__framerAnimation("#81dfe8bb",name_placeholder.animate({
       opacity: 0.00,
       options: {
         time: 0.1,
         curve: Bezier.linear
       }
     }));
-    window.__framerAnimation("#14b0e63d7",Claudia_Jones.animate({
+    window.__framerAnimation("#116282896",Claudia_Jones.animate({
       opacity: 1,
       color: "#000",
       options: {
@@ -128,8 +133,8 @@
       }
     }));
     blinker.y = 2000;
-    window.__framerAnimation("#17e095575",circle_arrow_right.animate({
-      backgroundColor: "rgba(139,212,255,1)",
+    window.__framerAnimation("#149231a34",circle_arrow_right.animate({
+      backgroundColor: "#1199EE",
       options: {
         time: 0.01,
         curve: Bezier.linear
@@ -140,7 +145,7 @@
       circle_arrow_right2.opacity = 1;
       circle_arrow_right2.backgroundColor = "#bdbdbd";
       arrow_back.color = "#bdbdbd";
-      window.__framerAnimation("#11aded516",whatsYourEmail.animate({
+      window.__framerAnimation("#e5f899d5",whatsYourEmail.animate({
         x: 64,
         color: "#000000",
         options: {
@@ -148,7 +153,7 @@
           curve: Bezier.ease
         }
       }));
-      window.__framerAnimation("#8d2a73dd",whatsYourName.animate({
+      window.__framerAnimation("#15844389c",whatsYourName.animate({
         x: 0,
         opacity: 0,
         options: {
@@ -159,7 +164,7 @@
       blinker.y = 13;
       Claudia_Jones.text = "Your Email Address";
       Claudia_Jones.color = "#787878";
-      window.__framerAnimation("#a857329f",keyboard2.animate({
+      window.__framerAnimation("#17370f75e",keyboard2.animate({
         x: 0,
         opacity: 1,
         options: {
@@ -175,15 +180,15 @@
     Claudia_Jones.text = "claudiajones@gmail.com";
     Claudia_Jones.color = "#000";
     blinker.y = 2000;
-    window.__framerAnimation("#13aa61156",circle_arrow_right.animate({
-      backgroundColor: "rgba(139,212,255,1)",
+    window.__framerAnimation("#105bfd615",circle_arrow_right.animate({
+      backgroundColor: "#1199EE",
       options: {
         time: 0.01,
         curve: Bezier.linear
       }
     }));
-    window.__framerAnimation("#1780b74dc",circle_arrow_right2.animate({
-      backgroundColor: "rgba(139,212,255,1)",
+    window.__framerAnimation("#14325399b",circle_arrow_right2.animate({
+      backgroundColor: "#1199EE",
       options: {
         time: 0.01,
         curve: Bezier.linear
@@ -191,7 +196,7 @@
     }));
     return circle_arrow_right2.onTap(function() {
       circle_arrow_right2.x = -1500;
-      window.__framerAnimation("#ab147dfb",whatsPassword.animate({
+      window.__framerAnimation("#1762e42ba",whatsPassword.animate({
         x: 64,
         color: "#000000",
         options: {
@@ -199,7 +204,7 @@
           curve: Bezier.ease
         }
       }));
-      window.__framerAnimation("#17442f917",whatsYourEmail.animate({
+      window.__framerAnimation("#13f5cbdd6",whatsYourEmail.animate({
         x: 0,
         opacity: 0,
         options: {
@@ -217,16 +222,55 @@
         Claudia_Jones.color = "#000";
         redPass.visible = true;
         keyboard3.x = -375;
+        weak.visible = true;
         return keyboard4.onTap(function() {
           Claudia_Jones.text = "******";
           redPass.visible = false;
           yelloPass.visible = true;
           keyboard4.x = -375;
-          circle_arrow_right3.backgroundColor = "rgba(139,212,255,1)";
-          return keyboard5.onTap(function() {
+          circle_arrow_right3.backgroundColor = "#1199EE";
+          weak.text = "okay";
+          keyboard5.onTap(function() {
             Claudia_Jones.text = "********";
             yelloPass.visible = false;
-            return greenPass.visible = true;
+            greenPass.visible = true;
+            return weak.text = "good";
+          });
+          return circle_arrow_right3.onTap(function() {
+            Views.fadeIn(screen3);
+            window.__framerAnimation("#10b72cad1",logo_cover1.animate({
+              x: -167,
+              y: -127,
+              height: 75,
+              options: {
+                time: 2,
+                curve: Bezier.linear
+              }
+            }));
+            window.__framerAnimation("#e78ae01a",logo_cover2.animate({
+              x: 150,
+              y: 150,
+              options: {
+                time: 1.5,
+                curve: Bezier.linear
+              }
+            }));
+            window.__framerAnimation("#11a85d1b8",haven_logo_1.animate({
+              opacity: 1,
+              options: {
+                time: 2,
+                curve: Bezier.ease
+              }
+            }));
+            return window.__framerAnimation("#13446bfde",welcome.animate({
+              opacity: 1,
+              color: "#000000",
+              options: {
+                time: 1,
+                curve: Bezier.ease,
+                delay: 1.5
+              }
+            }));
           });
         });
       });

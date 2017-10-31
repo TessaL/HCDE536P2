@@ -3,10 +3,6 @@ ViewController = require 'ViewController'
 Views = new ViewController
 	initialView: home
 	
-#flow = new FlowComponent
-
-#flow.showNext(home)
-
 Signup_Button.onTap (event, layer) ->
 	haven_logo.animate "a",
 		time: 0.40
@@ -28,7 +24,7 @@ Signup_Button.onTap (event, layer) ->
 			curve: Bezier.ease
 		#flow.showNext(screen2)
 	Signup_Button.animate
-		opacity: 1
+		opacity: 0
 		backgroundColor: "#ffffff"
 		y: 194
 		x: 31
@@ -36,23 +32,26 @@ Signup_Button.onTap (event, layer) ->
 			time: 0.5
 		signup_text.animate
 			color: "#000000"
-			y: 29
-			x: 123
-			signup_text.text = "Sign up"
-			opacity: 1
+			y: 213
+			x: 145
+			options: 
+				time: 0.5
 			
+		
 	Signup_Button.onAnimationEnd ->
 		Views.fadeIn(screen2)
 
 redPass.visible = false
 yelloPass.visible = false
 greenPass.visible = false
+weak.visible = false
+haven_logo_1.clip = true
 
 haven_logo.states.a =
-	width: 100
-	height: 100
 	y: 92
 	x: 138
+	width: 100
+	height: 100
 	
 
 blinker.animate
@@ -80,7 +79,7 @@ keyboard.onTap ->
 	blinker.y = 2000
 
 	circle_arrow_right.animate
-		backgroundColor: "rgba(139,212,255,1)"
+		backgroundColor: "#1199EE"
 		options:
 			time: 0.01
 			curve: Bezier.linear
@@ -122,13 +121,13 @@ keyboard2.onTap ->
 	blinker.y=2000
 	
 	circle_arrow_right.animate
-		backgroundColor: "rgba(139,212,255,1)"
+		backgroundColor:  "#1199EE"
 		options:
 			time: 0.01
 			curve: Bezier.linear
 	
 	circle_arrow_right2.animate
-		backgroundColor: "rgba(139,212,255,1)"
+		backgroundColor:  "#1199EE"
 		options:
 			time: 0.01
 			curve: Bezier.linear
@@ -161,22 +160,61 @@ keyboard2.onTap ->
 			Claudia_Jones.color = "#000"
 			redPass.visible = true
 			keyboard3.x = -375
+			weak.visible = true
 		
 			keyboard4.onTap ->
 				Claudia_Jones.text ="******"
 				redPass.visible = false
 				yelloPass.visible = true
 				keyboard4.x = -375
-				circle_arrow_right3.backgroundColor = "rgba(139,212,255,1)"
+				circle_arrow_right3.backgroundColor =  "#1199EE"
+				weak.text = "okay"
 				
 				keyboard5.onTap ->
 					Claudia_Jones.text = "********"
 					yelloPass.visible = false
 					greenPass.visible = true
-								
-	
+					weak.text = "good"
+				circle_arrow_right3.onTap ->
+					Views.fadeIn(screen3)
+					
+					logo_cover1.animate
+						x: -167
+						y: -127
+						height: 75
+						#opacity: 0.58
+						options:
+							time: 2
+							curve: Bezier.linear
+							
+					logo_cover2.animate
+						#width: 0
+						#height: 0
+						x: 150	
+						y: 150
+						#opacity: 0.60
+						options:
+							time: 1.5
+							curve: Bezier.linear
+					haven_logo_1.animate
+						opacity: 1
+						options:
+							time: 2
+							curve: Bezier.ease
+						
+					welcome.animate
+						opacity: 1
+						color: "#000000"
+						options:
+							time: 1
+							curve: Bezier.ease
+							delay: 1.5
 
-	
+			
+		
+#keyboard5.on## ->
+
+		
 	
 	
 
